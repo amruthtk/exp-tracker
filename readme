@@ -1,1 +1,103 @@
-r
+# 🍕 Food Expense Tracker
+
+A mobile-first expense tracking application designed for a group of 9 friends to manage shared food bills, track debts, and settle up efficiently.
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black) ![Firebase](https://img.shields.io/badge/Firebase-Firestore-orange) ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue)
+
+## ✨ Features
+
+### 1. Simple Authentication
+*   **One-tap Login:** Users select their name from a pre-defined list.
+*   **Auto-Seeding:** If the database is empty, the system automatically creates accounts for the 9 friends.
+
+### 2. Premium Dashboard
+*   **💰 To Receive:** Instantly see how much money the group owes you.
+*   **📉 Spent (My Part):** Tracks your actual consumption (your share), not just the total bill amount you swiped for.
+*   **⚡ Quick Actions:** Fast access to "Add Expense" and "History".
+
+### 3. Smart Expense Splitting
+*   **Input:** Enter Amount & Description.
+*   **Selection:** Select who was involved (defaults to everyone).
+*   **Logic:** Automatically calculates equal splits.
+*   **Self-Pay:** Automatically marks the payer's own share as "PAID".
+
+### 4. History & Settlements
+*   **Timeline:** Chronological list of all group meals.
+*   **Details:** Expand any expense to see who has paid and who is pending.
+*   **Settle Up:** Mark friends as PAID via:
+    *   📱 **UPI**
+    *   💵 **Cash**
+    *   💬 **Custom Note** (e.g., "Offset with Cab fare")
+
+### 5. PWA (Mobile App Experience)
+*   **Installable:** Add to Home Screen on iOS and Android.
+*   **App-like Feel:** Full-screen experience with no browser bars.
+
+---
+
+## 🛠️ Technical Stack
+
+*   **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+*   **Database:** [Firebase Firestore](https://firebase.google.com/) (Real-time NoSQL)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Glassmorphism design)
+*   **Icons:** [Lucide React](https://lucide.dev/)
+*   **Deployment:** Firebase Hosting / Vercel
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+*   Node.js installed
+*   Firebase Project set up
+
+### Installation
+
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/amruthtk/exp-tracker.git
+    cd exp-tracker
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Setup Environment Variables**
+    Create a `.env.local` file and add your Firebase config:
+    ```env
+    NEXT_PUBLIC_FIREBASE_API_KEY=your_key
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_bucket
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+    NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+    ```
+
+4.  **Run Locally**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 📲 How to Install (PWA)
+
+**On iPhone (iOS):**
+1.  Open the website in **Safari**.
+2.  Tap the **Share** button (Square with arrow).
+3.  Scroll down and tap **"Add to Home Screen"**.
+
+**On Android:**
+1.  Open the website in **Chrome**.
+2.  Tap the **Three Dots** menu.
+3.  Tap **"Install App"** or **"Add to Home Screen"**.
+
+---
+
+## ✅ Verification Checklist
+- [x] Build Success (`npm run build`)
+- [x] Database Connection (Firestore)
+- [x] Split Logic Accuracy
+- [x] Settlement Status Updates
